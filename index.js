@@ -1,8 +1,9 @@
 import express from 'express';
-import { Evento } from './Routers/routeEvento.js';
+import { Evento } from './Routers/ApiEvento.js';
+import { Perfiles } from './Routers/ApiPerfiles.js';
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware para el análisis de JSON
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use('*',(req, res, next) => {
 
 // Rutas
 app.use('/api/evento', Evento)
+app.use('/api/Perfiles', Perfiles)
 
 // Manejo de rutas no encontradas
 app.use((req, res, next) => {
