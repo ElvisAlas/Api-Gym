@@ -1,5 +1,5 @@
 import express from 'express';
-import { Evento } from './controllers/routes/routeEvento.js';
+import { Evento } from './Routers/routeEvento.js';
 const app = express();
 const port = 7000;
 
